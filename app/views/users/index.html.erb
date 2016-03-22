@@ -1,10 +1,17 @@
+<% if notice %>
 <p id="notice"><%= notice %></p>
+<% end %>
+
+<span class="btn">
+    <%= link_to 'New User', new_user_path %>
+</span>
 
 <h1>Listing Users</h1>
 
 <table>
+  
   <thead>
-    <tr>
+    <tr bgcolor="#FF0000">
       <th>Lname</th>
       <th>Fname</th>
       <th>Email</th>
@@ -26,8 +33,11 @@
       </tr>
     <% end %>
   </tbody>
+  
 </table>
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+
+
+

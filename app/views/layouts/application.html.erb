@@ -6,9 +6,32 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
 
-<%= yield %>
+<body class="<%= controller.controller_name %>">
+ 
 
-</body>
+   <div id="banner">
+    <img src="http://nmrwiki.org/wiki/images/7/7d/Bug.png" alt="logo" />   
+   <%= @page_title || "BugsZZilla" %>
+   </div>
+ 
+   <div id="columns">
+     
+     <div id="side">
+       <ul>
+         <li><a href="/">Home</a></li>
+         <li><a href="/">Bugs</a></li>
+         <li><a href="/users">Users</a></li>
+         <li><a href="/bugs">Contacts</a></li>
+         
+       </ul>
+     </div>
+
+       <div id="main">
+         <%= yield %>
+       </div>
+ 
+     </div>
+
+ </body>
 </html>
